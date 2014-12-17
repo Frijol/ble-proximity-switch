@@ -1,0 +1,29 @@
+{
+  "name": "ble-proximity-switch",
+  "version": "1.0.0",
+  "description": "Switch on a relay when BLE device is within range",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frijol/ble-proximity-switch.git"
+  },
+  "keywords": [
+    "tessel",
+    "relay",
+    "ble",
+    "proximity",
+    "ibeacon"
+  ],
+  "author": "Kelsey Breseman",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Frijol/ble-proximity-switch/issues"
+  },
+  "homepage": "https://github.com/Frijol/ble-proximity-switch",
+  "dependencies": {
+    "ble-ble113a": "^0.1.12"
+  }
+}
