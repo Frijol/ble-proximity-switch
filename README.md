@@ -34,5 +34,6 @@ This could be used to turn lights/audio/heaters/whatever on and off based on the
 
 ## Customizing
 
+* Feel free to add as many authorized devices as you want to the acceptedDevices array in index.js.
 * I have this polling every five seconds, because reactions that fast look great in a demo setting. But if you wanted to deploy this in real life, you would probably want to make the polling time quite a bit longer to save power.
 * If you want to use this long-term, you can run it from a battery, wall power, a solar charger, etc. according to [this doc](//tessel.io/modules#module-ble).
