@@ -11,6 +11,7 @@ This could be used to turn lights/audio/heaters/whatever on and off based on the
 * [Bluetooth Low Energy Module](//tessel.io/modules#module-ble)
 * [Relay Module](//tessel.io/modules#module-relay)
 * Something to plug into the relay that you want switched on or off.
+* One or more BLE devices that can advertise– I used a Myo; you could use a smartphone, another Tessel BLE module, or any number of other cool BLE devices.
 
 ## Hardware setup
 
