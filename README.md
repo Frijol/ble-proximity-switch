@@ -1,7 +1,7 @@
 BLE Proximity-based Switch
 ====================
 
-Switches on a relay when an authorized BLE device is in range. You get to specify the BLE device(s) you want to activate the switch.
+Switches on a relay when an authorized BLE device is in range. You get to specify the BLE device(s) you want to activate the switch– I'll show you how in the [Code Setup](#code-setup) instructions.
 
 ## Materials
 
