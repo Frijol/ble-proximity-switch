@@ -33,7 +33,7 @@ require('tesselate') ({
       // Check for changes
       poll();
     } else {
-      console.log('Unrecognized device discovered.', deviceID);
+      console.log('Unauthorized device discovered.', deviceID);
     }
   });
   
@@ -47,6 +47,7 @@ require('tesselate') ({
     console.log('Scanning...');
     ble.startScanning();
     noneFound = setTimeout(function () {
+      ble.stopScanning();
       console.log('No authorized BLE devices in range.');
       if(authorized) {
         deauthorize();
