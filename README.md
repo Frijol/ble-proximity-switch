@@ -1,6 +1,8 @@
 BLE Proximity-based Switch
 ====================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Frijol/ble-proximity-switch.svg)](https://greenkeeper.io/)
+
 Switches on a relay when an authorized BLE device is in range. You get to specify the BLE device(s) you want to activate the switch– I'll show you how in the [Code Setup](#code-setup) instructions.
 
 This could be used to turn lights/audio/heaters/whatever on and off based on the presence of people's devices. For example, I could add the device IDs for the smartphones of everyone in my office, and have the office turn on when the first one of us arrives in the morning, and off when everyone has left.
