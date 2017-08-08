@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/Frijol/ble-proximity-switch",
   "dependencies": {
-    "ble-ble113a": "^0.1.12",
+    "ble-ble113a": "^0.2.0",
     "relay-mono": "^0.1.2",
     "tesselate": "0.0.2"
   }
