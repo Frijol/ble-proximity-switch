@@ -1,31 +1,20 @@
 {
   "name": "ble-proximity-switch",
-  "version": "1.0.0",
-  "description": "Switch on a relay when BLE device is within range",
+  "version": "0.0.1",
+  "description": "BLE Proximity-based Switch",
   "main": "index.js",
+  "dependencies": {
+    "noble": "1.8.1",
+    "relay-mono": "^0.1.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Frijol/ble-proximity-switch.git"
-  },
+  "repository": "git://github.com/Frijol/ble-proximity-switch.git",
   "keywords": [
-    "tessel",
-    "relay",
-    "ble",
-    "proximity",
-    "ibeacon"
+    "Tessel"
   ],
-  "author": "Kelsey Breseman",
-  "license": "Apache 2.0",
-  "bugs": {
-    "url": "https://github.com/Frijol/ble-proximity-switch/issues"
-  },
-  "homepage": "https://github.com/Frijol/ble-proximity-switch",
-  "dependencies": {
-    "ble-ble113a": "^0.1.12",
-    "relay-mono": "^0.1.2",
-    "tesselate": "0.0.2"
-  }
+  "license": "MIT",
+  "readme": "A bare bones Tessel 2 blinky script."
 }
