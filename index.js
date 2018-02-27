@@ -29,6 +29,9 @@ var noble = require('noble');
 var tessel = require('tessel');
 var relaylib = require('relay-mono');
 var relay = relaylib.use(tessel.port['B']);
+var scanningLED = tessel.led[3]; // blue
+var unauthorizedLED = tessel.led[0]; // red
+var authorizedLED = tessel.led[2];
 
 // Notify when hardware ready
 relay.on('ready', function () {
@@ -40,6 +43,7 @@ noble.on('stateChange', function(state) {
     console.log('BLE ready, beginning to scan...');
     // Begin scanning for BLE peripherals
     noble.startScanning();
+    scanningLED.on();
   }
 });
 
@@ -49,6 +53,7 @@ noble.on('discover', function(peripheral) {
   if(acceptedDevices.indexOf(deviceID) > -1) {
     console.log('Authorized device in range:', deviceID);
     noble.stopScanning();
+    scanningLED.off();
     clearTimeout(noneFound);
     if(!authorized) {
       authorize();
@@ -69,8 +74,10 @@ function poll() {
 function scan () {
   console.log('Scanning...');
   noble.startScanning();
+  scanningLED.on();
   noneFound = setTimeout(function () {
     noble.stopScanning();
+    scanningLED.off();
     console.log('No authorized BLE devices in range.');
     if(authorized) {
       deauthorize();
@@ -85,6 +92,8 @@ function authorize () {
   authorized = true;
   relay.turnOn(1, function () {
     console.log('authorized:', authorized);
+    unauthorizedLED.off();
+    authorizedLED.on();
   });
 }
 
@@ -93,5 +102,7 @@ function deauthorize () {
   authorized = false;
   relay.turnOff(1, function () {
     console.log('authorized:', authorized);
+    authorizedLED.off();
+    unauthorizedLED.on();
   });
 }
